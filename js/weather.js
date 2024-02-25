@@ -1,5 +1,4 @@
-const config = require('../config/config.json');
-const API_KEY = config.API_KEY;
+const API_KEY = "274987ab5fcd0fde8c8dfd905b75875f";
 
 //user 위치 알려주기
 function onGeoOK(position) {
@@ -15,7 +14,6 @@ function onGeoOK(position) {
             const city = document.querySelector("#weather span:last-child");
             city.innerText = data.name;
             weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
-            console.log(data);
         });
 }
 //``로 묶고 ${}에 변수를 작성하면 `` 속 글자가 모두 string이 된다. 
